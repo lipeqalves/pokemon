@@ -20,6 +20,7 @@ let id = document.querySelector("#id-pokemon");
 let movimentoPokemon = document.querySelector("#movimento-pokemon");
 let habilidadePokemom = document.querySelector("#habilidade-pokemon");
 let imgPokemom = document.querySelector("#img-pokemon");
+let img = document.createElement("img");
 
 btnPokemom.addEventListener('click', function(e){
     e.preventDefault();
@@ -41,16 +42,16 @@ function requisicao(urls){ // faz a requisição
         }
       });
 }
+
 function buscaObjeto(result){    //faz a busca das propriedades do personagem
     nome.textContent =`Nome: ${result.name} `;
     id.textContent =`ID:  ${result.id}` ;   
-    movimentoPokemon.textContent = ` Movimeto: ${result.moves[0].move.name}`;
+    movimentoPokemon.textContent = `Movimeto: ${result.moves[0].move.name}`;
     habilidadePokemom.textContent = `Habilidade: ${result.abilities[0].ability.name}`;
 
-    let img = document.createElement("img");
+    
      img.src = `${result.sprites.front_default}`;
      img.style.width = "100%";
      img.style.height = "100%";
-     document.querySelector('#img-pokemon').appendChild(img);
-
+     imgPokemom.appendChild(img);
 }
