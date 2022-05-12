@@ -13,7 +13,6 @@
         }
       });  
 })*/
-
 let btnPokemom = document.querySelector("#btn-pokemon");
 let nome = document.querySelector("#nome-pokemon");
 let id = document.querySelector("#id-pokemon");
