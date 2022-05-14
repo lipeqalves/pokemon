@@ -14,8 +14,8 @@ body{
     background-image: url("./img/poke-img2.jpg");
 }
 .conteiner{
-    width: 50%;
-    height: 70vh;
+    width: 40%;
+    height: 80vh;
     border: 5px solid;
     border-image: linear-gradient(
         #FFFF00,
@@ -41,7 +41,7 @@ body{
 }
 #btn-pokemon{
     margin-top:10px;
-    width: 60%;
+    width: 70%;
     border: none;
     color: #A9A9A9;
 }
@@ -55,8 +55,9 @@ body{
     border: none;
 }
 #pokemon{
-    width: 80%;
+    width: 70%;
 }
+
 h1{
     padding-bottom: 20px;
     width: 70%; 
