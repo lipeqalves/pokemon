@@ -20,8 +20,9 @@ body{
     background-image: url("./img/poke-img2.jpg");
 }
 .conteiner{
-    width: 50%;
-    border: 5px solid;
+    width: 25%;
+    min-height: 50vh;
+    border: 0.5rem solid;
     border-image: linear-gradient(
         #FFFF00,
         #1C1C1C,
@@ -66,7 +67,7 @@ h3{
     margin-top:1rem;
 }
 
-@media  (max-width: 550px){
+@media  (max-width: 650px){
     .conteiner{
         width: 100%;
         min-height: 100vh;
