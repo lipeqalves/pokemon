@@ -15,19 +15,19 @@ btnPokemom.addEventListener('click', function(){
 })
 
 function requisicao(url){ // faz a requisição
-    try {
+   
         $.ajax({
             method: "GET",
             url: url,
             success:function(result){
                 //console.log(result);
                 buscaObjeto(result);
+            },
+            error: function(err) {
+                let nomePokemon = document.querySelector('#pokemon').value.toLowerCase();
+                alert(`O Pokemon: ${nomePokemon}, não existe`)
             }
-        });
-    } catch (error) {
-        console.log(error)
-    }
-   
+        }); 
 }
 function buscaObjeto(result){    //faz a busca das propriedades do personagem
     nome.textContent =`Nome: ${result.name} `;
