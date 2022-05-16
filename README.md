@@ -1,3 +1,6 @@
 # Pokemon
+
 ### iniciando com api
-- Esse projeto usa requisição para buscar um pokemon e mostrar algumas das suas caracteristicas na pagina web
+
+- desenvolva uma aplicação que, ao clicar no botão do formulário exibe na página os dados do
+Pokémon solicitado.
