@@ -6,25 +6,28 @@ let habilidadePokemom = document.querySelector("#habilidade-pokemon");
 let imgPokemom = document.querySelector("#img-pokemon");
 let img = document.createElement("img");
 
-btnPokemom.addEventListener('click', function(e){
-    e.preventDefault();
-    let nomePokemon = document.querySelector('#pokemon').value.toLowerCase();
-    let req = `https://pokeapi.co/api/v2/pokemon/${nomePokemon}`;
 
-    requisicao(req);
+btnPokemom.addEventListener('click', function(){
+    //e.preventDefault();
+        let nomePokemon = document.querySelector('#pokemon').value.toLowerCase();
+        let url = `https://pokeapi.co/api/v2/pokemon/${nomePokemon}`;
+        requisicao(url);   
 })
 
-function requisicao(urls){ // faz a requisição
-    $.ajax({
-        method: "GET",
-        url: urls,
-        dataType: "json",
-
-        success:function(result){
-           // console.log(result);
-            buscaObjeto(result);
-        }
-      });
+function requisicao(url){ // faz a requisição
+    try {
+        $.ajax({
+            method: "GET",
+            url: url,
+            success:function(result){
+                //console.log(result);
+                buscaObjeto(result);
+            }
+        });
+    } catch (error) {
+        console.log(error)
+    }
+   
 }
 function buscaObjeto(result){    //faz a busca das propriedades do personagem
     nome.textContent =`Nome: ${result.name} `;
@@ -34,8 +37,6 @@ function buscaObjeto(result){    //faz a busca das propriedades do personagem
     img.src = `${result.sprites.front_default}`;
     imgPokemom.appendChild(img);
 }
-
-
 
 
 
